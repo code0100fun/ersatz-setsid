@@ -21,5 +21,11 @@
 setsid: setsid.c
 	gcc -o setsid setsid.c
 
+install: setsid
+	cp setsid /usr/local/bin/setsid
+
+uninstall: setsid
+	rm /usr/local/bin/setsid
+
 clean:
 	rm setsid
